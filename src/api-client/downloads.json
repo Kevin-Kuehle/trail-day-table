@@ -1,0 +1,60 @@
+{
+  "downloads": [
+    {
+      "id": "1a",
+      "name": "Adam Hall Stage Equipment Katalog",
+      "category": "catalogue",
+      "type": "pdf",
+      "size": "8 MB",
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    },
+    {
+      "id": "2b",
+      "name": "Datenblatt",
+      "category": "dataSheet",
+      "type": "pdf",
+      "size": "172 GB",
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    },
+    {
+      "id": "3c",
+      "name": "Bedienungsanleitung nuxt asset",
+      "category": "dataSheet",
+      "type": "pdf",
+      "size": "119 KB",
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    },
+    {
+      "id": "4d",
+      "name": "Technische Zeichnung",
+      "category": "dataSheet",
+      "type": "pdf",
+      "size": "120 KB",
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    },
+    {
+      "id": "5e",
+      "name": "Ausschreibungstexte",
+      "category": "tenderText",
+      "type": "zip",
+      "size": "73 KB",
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    },
+    {
+      "id": "6f",
+      "name": "Artikel Bilder",
+      "category": "productImages",
+      "type": "zip",
+      "size": null,
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    },
+    {
+      "id": "7f",
+      "name": "Anleitung",
+      "category": "productInstructions",
+      "type": "zip",
+      "size": "130 KB",
+      "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
+    }
+  ]
+}
