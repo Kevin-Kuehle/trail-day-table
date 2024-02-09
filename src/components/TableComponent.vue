@@ -1,18 +1,30 @@
 <script setup>
 import { TableHeader, TableItem } from "./index";
-import { ref, watch, computed } from "vue";
+import { ref, watch, computed, reactive } from "vue";
+import { sortDataSize } from "../composables/sorting.ts";
 
 const props = defineProps(["colNames", "items"]);
-const emit = defineEmits(["onSelect"]);
+const emit = defineEmits(["onSelect", "onSort"]);
 
 const SORTING_TYPES = {
   ASC: "ASC",
   DESC: "DESC",
 };
+
 const selectedItems = ref([]);
 const sortHandler = function ({ sortType, col }) {
   console.log(`devlog: sortType`, sortType);
   console.log(`devlog: col`, col);
+
+  let sortedItems = [];
+
+  if (sortType === SORTING_TYPES.ASC) {
+    sortedItems = sortDataSize(props.items, "ASC");
+  } else {
+    sortedItems = sortDataSize(props.items, "DESC");
+  }
+
+  emit("onSort", sortedItems);
 };
 
 watch(

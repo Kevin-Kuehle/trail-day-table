@@ -26,7 +26,7 @@
     },
     {
       "id": "4d",
-      "name": "Technische Zeichnung",
+      "name": "Zechnische Zeichnung",
       "category": "dataSheet",
       "type": "pdf",
       "size": "120 KB",
@@ -45,7 +45,7 @@
       "name": "Artikel Bilder",
       "category": "productImages",
       "type": "zip",
-      "size": null,
+      "size": "100 GB",
       "link": "https://ahsw6-frontend-dev.diwc.de/shop/_nuxt/assets/img/green-globe-certified.png"
     },
     {

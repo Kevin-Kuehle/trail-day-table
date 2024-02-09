@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { getDownloadsApi } from "./api-client/downloadsService";
 import { Table, Dialog } from "./components";
-import { ref, Ref } from "vue";
+import { ref, Ref, reactive } from "vue";
 
 type TDownload = {
   name: string;
@@ -71,6 +71,14 @@ const closeHandler = () => {
     item.checked = false;
   });
 };
+
+const sortHandler = (sortedItems: TDownload[]) => {
+  if (sortedItems.length === 0) {
+    return;
+  }
+
+  items.value = sortedItems;
+};
 </script>
 
 <template>
@@ -81,6 +89,7 @@ const closeHandler = () => {
       ref="table"
       :col-names="colNames"
       :items="items"
+      @onSort="sortHandler"
       @onSelect="selectHandler"
     />
     <button
