@@ -1,19 +1,8 @@
 <script setup lang="ts">
 import { getDownloadsApi } from "./api-client/downloadsService";
 import { Table, Dialog } from "./components";
-import { ref, Ref, reactive } from "vue";
-
-type TDownload = {
-  name: string;
-  category: string;
-  type: string;
-  size: string;
-  checked: boolean;
-};
-
-type TResponse = {
-  downloads: TDownload[];
-};
+import { ref, Ref } from "vue";
+import { TDownload, TResponse } from "@/types";
 
 const colNames = {
   name: "Name",

@@ -1,19 +1,4 @@
-export type TDownload = {
-  name: string;
-  category: string;
-  type: string;
-  size: string;
-  checked: boolean;
-  sizeInBytes?: number;
-};
-
-type DataSizeType = {
-  B: number;
-  KB: number;
-  MB: number;
-  GB: number;
-  TB: number;
-};
+import { TDownload } from "@/types";
 
 const DATA_SIZE_TYPES = {
   B: 1,

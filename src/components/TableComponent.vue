@@ -13,15 +13,22 @@ const SORTING_TYPES = {
 
 const selectedItems = ref([]);
 const sortHandler = function ({ sortType, col }) {
-  console.log(`devlog: sortType`, sortType);
-  console.log(`devlog: col`, col);
-
   let sortedItems = [];
 
-  if (sortType === SORTING_TYPES.ASC) {
-    sortedItems = sortDataSize(props.items, "ASC");
+  if (col === "Size") {
+    sortedItems = sortDataSize(props.items, sortType);
   } else {
-    sortedItems = sortDataSize(props.items, "DESC");
+    const key = Object.keys(props.colNames).find(
+      (k) => props.colNames[k] === col
+    );
+
+    sortedItems = props.items.sort((a, b) => {
+      if (sortType === SORTING_TYPES.ASC) {
+        return a[key].localeCompare(b[key]);
+      } else {
+        return b[key].localeCompare(a[key]);
+      }
+    });
   }
 
   emit("onSort", sortedItems);

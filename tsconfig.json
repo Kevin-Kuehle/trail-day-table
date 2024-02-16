@@ -18,7 +18,13 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Paths */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
@@ -26,5 +32,6 @@
     "src/**/*.vue",
     "cypress/component/sorting.test.spec.ts"
   ],
+
   "references": [{ "path": "./tsconfig.node.json" }]
 }
