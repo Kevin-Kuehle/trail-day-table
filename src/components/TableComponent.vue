@@ -1,6 +1,6 @@
 <script setup>
 import { TableHeader, TableItem } from "./index";
-import { ref, watch, computed, reactive } from "vue";
+import { ref, watch, computed } from "vue";
 import { sortDataSize } from "../composables/sorting.ts";
 
 const props = defineProps(["colNames", "items"]);
@@ -64,7 +64,5 @@ watch(
 .table-content {
   display: grid;
   gap: 0 2rem;
-  .table-content-item {
-  }
 }
 </style>

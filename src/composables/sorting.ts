@@ -1,5 +1,13 @@
 import { TDownload } from "@/types";
 
+type DataSizeType = {
+  B: number;
+  KB: number;
+  MB: number;
+  GB: number;
+  TB: number;
+};
+
 const DATA_SIZE_TYPES = {
   B: 1,
   KB: 1024,
