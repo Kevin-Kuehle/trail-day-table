@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import SortSvg from "./SortSvg.vue";
 
 defineProps(["cols"]);
 
@@ -15,13 +16,14 @@ const SORTING_TYPES = {
 const sort_type = ref(SORTING_TYPES.ASC);
 
 const sortTypeChanger = (sortType: TSortType) => {
-  console.log(`devlog: checl`);
   if (sortType === SORTING_TYPES.ASC) {
     sort_type.value = SORTING_TYPES.DESC;
   } else {
     sort_type.value = SORTING_TYPES.ASC;
   }
 };
+
+const sortButtonClass = ref("hover:cursor-pointer  py-1 h-[14px] w-4");
 </script>
 
 <template>
@@ -36,22 +38,26 @@ const sortTypeChanger = (sortType: TSortType) => {
             $emit('onSort', { sortType: sort_type, col: col });
             sortTypeChanger ? sortTypeChanger(sort_type as TSortType) : null;
           "
-          class="c-table-header__title__name"
+          class="c-table-header__title__name hover:cursor-pointer"
         >
           {{ col }}
         </div>
-        <div class="c-table-header__title__sorting px-2 flex">
+        <div
+          class="c-table-header__title__sorting px-2 flex flex-col justify-center"
+        >
           <div
             @click="$emit('onSort', { sortType: SORTING_TYPES.ASC, col: col })"
+            :class="sortButtonClass"
             class="c-table-header__title__sorting__up hover:cursor-pointer"
           >
-            👆
+            <SortSvg />
           </div>
           <div
             @click="$emit('onSort', { sortType: SORTING_TYPES.DESC, col: col })"
-            class="c-table-header__title__sorting__down hover:cursor-pointer"
+            :class="sortButtonClass"
+            class="c-table-header__title__sorting__down rotate-180"
           >
-            👇
+            <SortSvg />
           </div>
         </div>
       </div>
